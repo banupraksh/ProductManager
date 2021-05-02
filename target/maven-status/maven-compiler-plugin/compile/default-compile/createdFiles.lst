@@ -1,0 +1,5 @@
+net/codejava/AppController.class
+net/codejava/AppMain.class
+net/codejava/Product.class
+net/codejava/ProductService.class
+net/codejava/ProductRepository.class
