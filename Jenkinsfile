@@ -4,7 +4,7 @@ node{
     def mavenCMD = "${mavenHome}/bin/mvn"
     def buildNumber = BUILD_NUMBER
      
-    stage('Git Checkout'){
+    stage('Git Checkout QA'){
         git branch: 'Development', credentialsId: 'GIT_CREDENTIALS', url: 'https://github.com/banupraksh/ProductManager.git'
     }
     stage(" Build Package"){
