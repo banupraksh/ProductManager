@@ -10,7 +10,7 @@ node{
     stage(" Build Package"){
       sh "${mavenCMD} clean package"
     }
-     stage(" Build Package"){
+     stage("Run Test Cases"){
       sh "${mavenCMD} test"
     }
     stage('Build Docker Image'){
