@@ -10,6 +10,9 @@ node{
     stage(" Build Package"){
       sh "${mavenCMD} clean package"
     }
+    stage("Run Test Cases"){
+      sh "${mavenCMD} test"
+    }
     stage('Build Docker Image'){
         sh "docker rmi 9871234/productmanager:${currentBuild.previousBuild.getNumber()} || true"
         sh "docker build -t 9871234/productmanager:${buildNumber} ."
