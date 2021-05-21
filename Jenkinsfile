@@ -29,7 +29,7 @@ node{
          sshagent(['DOCKER_DEV_SERVER_SSH']) {
            sh "ssh -o StrictHostKeyChecking=no ubuntu@172.31.37.74 docker rm -f productmanager-qa || true"
            sh "ssh -o StrictHostKeyChecking=no ubuntu@172.31.37.74 docker rmi 9871234/productmanager-qa:${currentBuild.previousBuild.getNumber()} || true"
-           sh "ssh -o StrictHostKeyChecking=no ubuntu@172.31.37.74 docker run -d -p 9111:8080 --name productmanager-qa 9871234/productmanager-qa:${buildNumber}"
+           sh "ssh -o StrictHostKeyChecking=no ubuntu@172.31.37.74 docker run -d -p 9090:8080 --name productmanager-qa 9871234/productmanager-qa:${buildNumber}"
             }
          
      }
