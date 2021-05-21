@@ -22,7 +22,7 @@
             </tr>
         </thead>
         <tbody>
-            <tr th:each="product : ${listProducts}">
+            <tr th:each="product : ${listProducts}" style="background-color: beige;">
             	<td th:text="${product.id}">Product ID</td>
                 <td th:text="${product.name}">Name</td>
                 <td th:text="${product.brand}">Brand</td>
