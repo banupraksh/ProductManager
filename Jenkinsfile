@@ -5,7 +5,7 @@ node{
     def buildNumber = BUILD_NUMBER
      
     stage('Git Checkout Dev'){
-        git branch: 'Development', credentialsId: 'GIT_CREDENTIALS', url: 'https://github.com/banupraksh/ProductManager.git'
+        git branch: 'master', credentialsId: 'GIT_CREDENTIALS', url: 'https://github.com/banupraksh/ProductManager.git'
     }
     stage(" Build Package"){
       sh "${mavenCMD} clean package"
